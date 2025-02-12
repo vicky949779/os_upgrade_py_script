@@ -1,0 +1,95 @@
+Command: show ethernet-switching table
+
+--------------------------------------------------
+Command: show version
+fpc0:
+--------------------------------------------------------------------------
+Hostname: vqfx-re
+Model: vqfx-10000
+Junos: 18.1R1.9 limited
+JUNOS Base OS boot [18.1R1.9]
+JUNOS Base OS Software Suite [18.1R1.9]
+JUNOS Crypto Software Suite [18.1R1.9]
+JUNOS Online Documentation [18.1R1.9]
+JUNOS Kernel Software Suite [18.1R1.9]
+JUNOS Packet Forwarding Engine Support (qfx-10-f) [18.1R1.9]
+JUNOS Routing Software Suite [18.1R1.9]
+JUNOS jsd [i386-18.1R1.9-jet-1]
+JUNOS SDN Software Suite [18.1R1.9]
+JUNOS Enterprise Software Suite [18.1R1.9]
+JUNOS Web Management [18.1R1.9]
+JUNOS py-base-i386 [18.1R1.9]
+JUNOS py-extensions-i386 [18.1R1.9]
+
+--------------------------------------------------
+Command: show interfaces terse
+Interface               Admin Link Proto    Local                 Remote
+gr-0/0/0                up    up
+bme0                    up    up
+bme0.0                  up    up   inet     128.0.0.1/2     
+                                            128.0.0.4/2     
+                                            128.0.0.16/2    
+                                            128.0.0.63/2    
+cbp0                    up    up
+dsc                     up    up
+em0                     up    up
+em0.0                   up    up   inet     192.168.40.131/24
+em1                     up    down
+em1.0                   up    down inet     169.254.0.2/24  
+em2                     up    down
+em2.32768               up    down inet     192.168.1.2/24  
+em3                     up    down
+em4                     up    down
+em4.32768               up    down inet     192.0.2.2/24    
+em5                     up    down
+em6                     up    down
+em7                     up    down
+em8                     up    down
+em9                     up    down
+em10                    up    down
+em11                    up    down
+esi                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+jsrv                    up    up
+jsrv.1                  up    up   inet     128.0.0.127/2   
+lo0                     up    up
+lo0.0                   up    up   inet    
+                                   inet6    fe80::205:860f:fc71:f700
+lo0.16385               up    up   inet    
+lsi                     up    up
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+pip0                    up    up
+tap                     up    up
+vme                     up    down
+vtep                    up    up
+
+--------------------------------------------------
+Command: show interfaces descriptions
+Interface       Admin Link Description
+em0             up    up   Management Interface
+em1             up    down Uplink to Core Switch
+em2             up    down Backup Link
+em3             up    down Customer VLAN
+em4             up    down Server Network
+em5             up    down Unused Interface
+em6             up    down WAN Connection
+
+--------------------------------------------------
+Command: show lldp neighbors
+
+--------------------------------------------------
+Command: show virtual-chassis
+
+Virtual Chassis ID: 6c89.751e.e97c
+Virtual Chassis Mode: Enabled
+                                                Mstr           Mixed Route Neighbor List
+Member ID  Status   Serial No    Model          prio  Role      Mode  Mode ID  Interface
+0 (FPC 0)  Prsnt    817789208176 vqfx-10000     128   Master*      N  VC
+
+Member ID for next new member: 1 (FPC 1)
+
+--------------------------------------------------

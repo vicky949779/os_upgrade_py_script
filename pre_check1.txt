@@ -1,0 +1,220 @@
+Command: Show version
+re name: fpc0
+host name: vqfx-re
+product model: vqfx-10000
+product name: vqfx-10000
+junos version: 18.1R1.9
+junos edition: limited
+name: junos
+comment: JUNOS Base OS boot [18.1R1.9]
+name: jbase
+comment: JUNOS Base OS Software Suite [18.1R1.9]
+name: jcrypto
+comment: JUNOS Crypto Software Suite [18.1R1.9]
+name: jdocs
+comment: JUNOS Online Documentation [18.1R1.9]
+name: jkernel
+comment: JUNOS Kernel Software Suite [18.1R1.9]
+name: jpfe
+comment: JUNOS Packet Forwarding Engine Support (qfx-10-f) [18.1R1.9]
+name: jroute
+comment: JUNOS Routing Software Suite [18.1R1.9]
+name: jsd
+comment: JUNOS jsd [i386-18.1R1.9-jet-1]
+name: jsdn-i386
+comment: JUNOS SDN Software Suite [18.1R1.9]
+name: jswitch
+comment: JUNOS Enterprise Software Suite [18.1R1.9]
+name: jweb
+comment: JUNOS Web Management [18.1R1.9]
+name: py-base-i386
+comment: JUNOS py-base-i386 [18.1R1.9]
+name: py-extensions-i386
+comment: JUNOS py-extensions-i386 [18.1R1.9]
+--------------------------------------------------
+Command: Show interfaces terse
+name: gr-0/0/0
+admin status: up
+oper status: up
+name: bme0
+admin status: up
+oper status: up
+name: bme0.0
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 128.0.0.1/2
+ifa local: 128.0.0.4/2
+ifa local: 128.0.0.16/2
+ifa local: 128.0.0.63/2
+name: cbp0
+admin status: up
+oper status: up
+name: dsc
+admin status: up
+oper status: up
+name: em0
+admin status: up
+oper status: up
+name: em0.0
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 192.168.40.131/24
+name: em1
+admin status: up
+oper status: down
+name: em1.0
+admin status: up
+oper status: down
+address family name: inet
+ifa local: 169.254.0.2/24
+name: em2
+admin status: up
+oper status: down
+name: em2.32768
+admin status: up
+oper status: down
+address family name: inet
+ifa local: 192.168.1.2/24
+name: em3
+admin status: up
+oper status: down
+name: em4
+admin status: up
+oper status: down
+name: em4.32768
+admin status: up
+oper status: down
+address family name: inet
+ifa local: 192.0.2.2/24
+name: em5
+admin status: up
+oper status: down
+name: em6
+admin status: up
+oper status: down
+name: em7
+admin status: up
+oper status: down
+name: em8
+admin status: up
+oper status: down
+name: em9
+admin status: up
+oper status: down
+name: em10
+admin status: up
+oper status: down
+name: em11
+admin status: up
+oper status: down
+name: esi
+admin status: up
+oper status: up
+name: gre
+admin status: up
+oper status: up
+name: ipip
+admin status: up
+oper status: up
+name: irb
+admin status: up
+oper status: up
+name: jsrv
+admin status: up
+oper status: up
+name: jsrv.1
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 128.0.0.127/2
+name: lo0
+admin status: up
+oper status: up
+name: lo0.0
+admin status: up
+oper status: up
+address family name: inet
+address family name: inet6
+ifa local: fe80::205:860f:fc71:f700
+name: lo0.16385
+admin status: up
+oper status: up
+address family name: inet
+name: lsi
+admin status: up
+oper status: up
+name: mtun
+admin status: up
+oper status: up
+name: pimd
+admin status: up
+oper status: up
+name: pime
+admin status: up
+oper status: up
+name: pip0
+admin status: up
+oper status: up
+name: tap
+admin status: up
+oper status: up
+name: vme
+admin status: up
+oper status: down
+name: vtep
+admin status: up
+oper status: up
+--------------------------------------------------
+Command: Show LLDP neighbors
+
+--------------------------------------------------
+Command: Show virtual-chassis
+virtual chassis id: 6c89.751e.e97c
+virtual chassis mode: Enabled
+member status: Prsnt
+member id: 0
+fpc slot: (FPC 0)
+member serial number: 817789208176
+member model: vqfx-10000
+member priority: 128
+member mixed mode: N
+member route mode: VC
+member role: Master*
+next member id: 1
+next fpc slot: 1
+--------------------------------------------------
+Command: Show interfaces description
+name: em0
+admin status: up
+oper status: up
+description: Management Interface
+name: em1
+admin status: up
+oper status: down
+description: Uplink to Core Switch
+name: em2
+admin status: up
+oper status: down
+description: Backup Link
+name: em3
+admin status: up
+oper status: down
+description: Customer VLAN
+name: em4
+admin status: up
+oper status: down
+description: Server Network
+name: em5
+admin status: up
+oper status: down
+description: Unused Interface
+name: em6
+admin status: up
+oper status: down
+description: WAN Connection
+--------------------------------------------------
+Command: Show Ethernet Switching Table
+
+--------------------------------------------------

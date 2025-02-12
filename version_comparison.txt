@@ -1,0 +1,15 @@
++---------------------------------------------------------------------------------------------------------+
+| Pre-Check                                          | Post-Check                                         |
++---------------------------------------------------------------------------------------------------------+
+| Hostname: vqfx-release                             | Hostname: vqfx-re                                  |
+| Junos: 18.1R1.9 limited                            | Junos: 18.1R1.91 limited                           |
+| JUNOS py-extensions-i386 [18.1R1.9]                | JUNOS py-extensions-i386 [18.11R1.9]               |
+| gr-0/0/0                up    up                   | gr-0/0/0                down    up                 |
+| em0.0                   up    up   inet            | em0.0                   up    up   inet            |
+| 192.168.40.131/24                                  | 191.168.40.131/24                                  |
+| em1                     up    up                   | em1                     up    down                 |
+| em7                     up    up                   | em7                     up    down                 |
+| em1             up    down Uplink to Core Switch   | em1             down    down Uplink to Core Switch |
+| em2             up    down Backup Link             | em2             down    down Backup Link           |
+| Virtual Chassis Mode: Enabled                      | Virtual Chassis Mode: Disables                     |
++---------------------------------------------------------------------------------------------------------+
