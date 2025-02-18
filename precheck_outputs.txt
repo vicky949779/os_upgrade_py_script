@@ -1,95 +1,1386 @@
-Command: show ethernet-switching table
+===== Show version  =====
+re name: localre
+host name: che-corp-aslab-1
+product model: ex4300-48mp
+product name: ex4300-48mp
+junos version: 21.2R3-S6.11
+name: os-kernel
+package name: os-kernel-prd-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS Kernel 64-bit  [20230531.8cb8c20_builder_stable_12_212]
+name: os-libs
+package name: os-libs-12-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS libs [20230531.8cb8c20_builder_stable_12_212]
+name: os-runtime
+package name: os-runtime-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS runtime [20230531.8cb8c20_builder_stable_12_212]
+name: zoneinfo
+package name: os-zoneinfo-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS time zone information [20230531.8cb8c20_builder_stable_12_212]
+name: os-libs-compat32
+package name: os-libs-compat32-12-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS libs compat32 [20230531.8cb8c20_builder_stable_12_212]
+name: os-compat32
+package name: os-compat32-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS 32-bit compatibility [20230531.8cb8c20_builder_stable_12_212]
+name: py-extensions
+package name: py-extensions-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS py extensions [20230818.132727_builder_junos_212_r3_s6]
+name: py-base
+package name: py-base-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS py base [20230818.132727_builder_junos_212_r3_s6]
+name: os-vmguest
+package name: os-vmguest-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS vmguest [20230531.8cb8c20_builder_stable_12_212]
+name: os-crypto
+package name: os-crypto-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS crypto [20230531.8cb8c20_builder_stable_12_212]
+name: os-boot-junos
+package name: os-boot-junos-ve-x86-32-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS boot-ve files [20230531.8cb8c20_builder_stable_12_212]
+name: netstack
+package name: junos-net-prd-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS network stack and utilities [20230818.132727_builder_junos_212_r3_s6]
+name: junos-libs
+package name: junos-libs-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS libs [20230818.132727_builder_junos_212_r3_s6]
+name: junos-libs-compat32
+package name: junos-libs-compat32-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS libs compat32 [20230818.132727_builder_junos_212_r3_s6]
+name: junos-runtime
+package name: junos-runtime-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS runtime [20230818.132727_builder_junos_212_r3_s6]
+name: na-telemetry
+package name: na-telemetry-x86-32-21.2R3-S6.11
+comment: JUNOS na telemetry [21.2R3-S6.11]
+name: jweb-ex
+package name: jweb-ex-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Web Management Platform Package [20230818.132727_builder_junos_212_r3_s6]
+name: junos-vmguest-platform
+package name: junos-modules-qfx-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-runtime-platform
+package name: junos-runtime-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx runtime [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-mpls-oam-basic
+package name: junos-routing-mpls-oam-basic-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing mpls-oam-basic [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-mpls-oam-advanced
+package name: junos-routing-mpls-oam-advanced-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing mpls-oam-advanced [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-lsys
+package name: junos-routing-lsys-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing lsys [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-controller-internal
+package name: junos-routing-controller-internal-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing controller-internal [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-controller-external
+package name: junos-routing-controller-external-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing controller-external [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-compat32
+package name: junos-routing-compat32-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing 32-bit Compatible Version [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-aggregated
+package name: junos-routing-aggregated-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing aggregated [20230818.132727_builder_junos_212_r3_s6]
+name: junos-probe
+package name: junos-probe-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS probe utility [20230818.132727_builder_junos_212_r3_s6]
+name: junos-platform
+package name: junos-platform-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS common platform support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-platform-platform
+package name: junos-platform-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx platform support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-openconfig
+package name: junos-openconfig-x86-32-21.2R3-S6.11
+comment: JUNOS Openconfig [21.2R3-S6.11]
+name: junos-net-platform
+package name: junos-net-dcp-prd-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS dcp network modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-modules
+package name: junos-modules-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-dp-crypto-support-platform
+package name: junos-dp-crypto-support-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx Data Plane Crypto Support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-daemons
+package name: junos-daemons-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS daemons [20230818.132727_builder_junos_212_r3_s6]
+name: junos-daemons-platform
+package name: junos-daemons-qfx-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx daemons [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-urlf
+package name: jservices-urlf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services URL Filter package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-traffic-dird
+package name: jservices-traffic-dird-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services TLB Service PIC package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-telemetry
+package name: jservices-telemetry-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Telemetry [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-tcp-log
+package name: jservices-tcp-log-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services TCP-LOG [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ssl
+package name: jservices-ssl-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services SSL [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-softwire
+package name: jservices-softwire-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services SOFTWIRE [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-sfw
+package name: jservices-sfw-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Stateful Firewall [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-rtcom
+package name: jservices-rtcom-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services RTCOM [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-rpm
+package name: jservices-rpm-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services RPM [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-pcef
+package name: jservices-pcef-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services PCEF package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-nat
+package name: jservices-nat-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services NAT [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-mss
+package name: jservices-mss-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Mobile Subscriber Service Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-mobile
+package name: jservices-mobile-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services MobileNext Software package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-lrf
+package name: jservices-lrf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Logging Report Framework package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-llpdf
+package name: jservices-llpdf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services LL-PDF Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-jflow
+package name: jservices-jflow-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Jflow Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-jdpi
+package name: jservices-jdpi-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Deep Packet Inspection package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ipsec
+package name: jservices-ipsec-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services IPSec [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ids
+package name: jservices-ids-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services IDS [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-idp
+package name: jservices-idp-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS IDP Services [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-hcm
+package name: jservices-hcm-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services HTTP Content Management package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-dnsf
+package name: jservices-dnsf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services DNS Filter package (i386) [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-crypto-base
+package name: jservices-crypto-base-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Crypto [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-cpcd
+package name: jservices-cpcd-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Captive Portal and Content Delivery Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-cos
+package name: jservices-cos-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services COS [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-appid
+package name: jservices-appid-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS AppId Services [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-alg
+package name: jservices-alg-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Application Level Gateways [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-aacl
+package name: jservices-aacl-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services AACL Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jsdn
+package name: jsdn-x86-32-21.2R3-S6.11
+comment: JUNOS SDN Software Suite [20230818.132727_builder_junos_212_r3_s6]
+name: jsd-jet-1
+package name: jsd-x86-32-21.2R3-S6.11-jet-1
+comment: JUNOS Extension Toolkit [20230818.132727_builder_junos_212_r3_s6]
+name: jphone-home
+package name: jphone-home-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Phone-home [20230818.132727_builder_junos_212_r3_s6]
+name: jpfe-platform
+package name: jpfe-qfx-x86-32-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Packet Forwarding Engine Support (DC-PFE) [20230818.132727_builder_junos_212_r3_s6]
+name: jpfe-common
+package name: jpfe-common-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Packet Forwarding Engine Support (M/T Common) [20230818.132727_builder_junos_212_r3_s6]
+name: jmrt-base
+package name: jmrt-base-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Juniper Malware Removal Tool (JMRT) [1.0.0+20230818.132727_builder_junos_212_r3_s6]
+name: jinsight
+package name: jinsight-x86-32-21.2R3-S6.11
+comment: JUNOS J-Insight [20230818.132727_builder_junos_212_r3_s6]
+name: jfirmware
+package name: jfirmware-x86-32-21.2R3-S6.11
+comment: JUNOS jfirmware [20230818.132727_builder_junos_212_r3_s6]
+name: jdocs
+package name: jdocs-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Online Documentation [20230818.132727_builder_junos_212_r3_s6]
+name: jail-runtime
+package name: jail-runtime-x86-32-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS jail runtime [20230531.8cb8c20_builder_stable_12_212]
+name: fips-mode
+package name: fips-mode-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS FIPS mode utilities [20230818.132727_builder_junos_212_r3_s6]
+name: Junos host
+comment: Junos host: 21.2R3-S6.11
+name: JUNOS Host kernel-release
+comment: JUNOS Host kernel-release [3.14.52-rt50-WR7.0.0.9_ovp]
+name: JUNOS Host kernel-version
+comment: JUNOS Host kernel-version [#1 SMP Tue Jan 18 00:43:48 PST 2022]
+name: Junos Host Software package[1]
+comment: JUNOS Host ex-4300mp platform package [21.2R3-S6.11]
+name: Junos Host Software package[2]
+comment: JUNOS Host ex-4300mp control-plane package [21.2R3-S6.11]
+name: Junos Host Software package[3]
+comment: JUNOS Host ex-4300mp base package [21.2R3-S6.11]
+name: Junos Host Software package[4]
+comment: JUNOS Host ex-4300mp data-plane package [21.2R3-S6.11]
+re name: fpc1
+host name: che-corp-aslab-1
+product model: ex4300-48mp
+product name: ex4300-48mp
+junos version: 21.2R3-S6.11
+name: os-kernel
+package name: os-kernel-prd-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS Kernel 64-bit  [20230531.8cb8c20_builder_stable_12_212]
+name: os-libs
+package name: os-libs-12-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS libs [20230531.8cb8c20_builder_stable_12_212]
+name: os-runtime
+package name: os-runtime-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS runtime [20230531.8cb8c20_builder_stable_12_212]
+name: zoneinfo
+package name: os-zoneinfo-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS time zone information [20230531.8cb8c20_builder_stable_12_212]
+name: os-libs-compat32
+package name: os-libs-compat32-12-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS libs compat32 [20230531.8cb8c20_builder_stable_12_212]
+name: os-compat32
+package name: os-compat32-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS 32-bit compatibility [20230531.8cb8c20_builder_stable_12_212]
+name: py-extensions
+package name: py-extensions-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS py extensions [20230818.132727_builder_junos_212_r3_s6]
+name: py-base
+package name: py-base-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS py base [20230818.132727_builder_junos_212_r3_s6]
+name: os-vmguest
+package name: os-vmguest-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS vmguest [20230531.8cb8c20_builder_stable_12_212]
+name: os-crypto
+package name: os-crypto-x86-64-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS crypto [20230531.8cb8c20_builder_stable_12_212]
+name: os-boot-junos
+package name: os-boot-junos-ve-x86-32-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS OS boot-ve files [20230531.8cb8c20_builder_stable_12_212]
+name: netstack
+package name: junos-net-prd-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS network stack and utilities [20230818.132727_builder_junos_212_r3_s6]
+name: junos-libs
+package name: junos-libs-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS libs [20230818.132727_builder_junos_212_r3_s6]
+name: junos-libs-compat32
+package name: junos-libs-compat32-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS libs compat32 [20230818.132727_builder_junos_212_r3_s6]
+name: junos-runtime
+package name: junos-runtime-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS runtime [20230818.132727_builder_junos_212_r3_s6]
+name: na-telemetry
+package name: na-telemetry-x86-32-21.2R3-S6.11
+comment: JUNOS na telemetry [21.2R3-S6.11]
+name: jweb-ex
+package name: jweb-ex-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Web Management Platform Package [20230818.132727_builder_junos_212_r3_s6]
+name: junos-vmguest-platform
+package name: junos-modules-qfx-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-runtime-platform
+package name: junos-runtime-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx runtime [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-mpls-oam-basic
+package name: junos-routing-mpls-oam-basic-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing mpls-oam-basic [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-mpls-oam-advanced
+package name: junos-routing-mpls-oam-advanced-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing mpls-oam-advanced [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-lsys
+package name: junos-routing-lsys-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing lsys [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-controller-internal
+package name: junos-routing-controller-internal-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing controller-internal [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-controller-external
+package name: junos-routing-controller-external-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing controller-external [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-compat32
+package name: junos-routing-compat32-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing 32-bit Compatible Version [20230818.132727_builder_junos_212_r3_s6]
+name: junos-routing-aggregated
+package name: junos-routing-aggregated-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Routing aggregated [20230818.132727_builder_junos_212_r3_s6]
+name: junos-probe
+package name: junos-probe-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS probe utility [20230818.132727_builder_junos_212_r3_s6]
+name: junos-platform
+package name: junos-platform-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS common platform support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-platform-platform
+package name: junos-platform-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx platform support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-openconfig
+package name: junos-openconfig-x86-32-21.2R3-S6.11
+comment: JUNOS Openconfig [21.2R3-S6.11]
+name: junos-net-platform
+package name: junos-net-dcp-prd-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS dcp network modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-modules
+package name: junos-modules-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS modules [20230818.132727_builder_junos_212_r3_s6]
+name: junos-dp-crypto-support-platform
+package name: junos-dp-crypto-support-qfx-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx Data Plane Crypto Support [20230818.132727_builder_junos_212_r3_s6]
+name: junos-daemons
+package name: junos-daemons-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS daemons [20230818.132727_builder_junos_212_r3_s6]
+name: junos-daemons-platform
+package name: junos-daemons-qfx-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS qfx daemons [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-urlf
+package name: jservices-urlf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services URL Filter package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-traffic-dird
+package name: jservices-traffic-dird-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services TLB Service PIC package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-telemetry
+package name: jservices-telemetry-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Telemetry [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-tcp-log
+package name: jservices-tcp-log-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services TCP-LOG [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ssl
+package name: jservices-ssl-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services SSL [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-softwire
+package name: jservices-softwire-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services SOFTWIRE [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-sfw
+package name: jservices-sfw-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Stateful Firewall [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-rtcom
+package name: jservices-rtcom-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services RTCOM [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-rpm
+package name: jservices-rpm-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services RPM [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-pcef
+package name: jservices-pcef-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services PCEF package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-nat
+package name: jservices-nat-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services NAT [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-mss
+package name: jservices-mss-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Mobile Subscriber Service Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-mobile
+package name: jservices-mobile-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services MobileNext Software package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-lrf
+package name: jservices-lrf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Logging Report Framework package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-llpdf
+package name: jservices-llpdf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services LL-PDF Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-jflow
+package name: jservices-jflow-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Jflow Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-jdpi
+package name: jservices-jdpi-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Deep Packet Inspection package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ipsec
+package name: jservices-ipsec-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services IPSec [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-ids
+package name: jservices-ids-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services IDS [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-idp
+package name: jservices-idp-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS IDP Services [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-hcm
+package name: jservices-hcm-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services HTTP Content Management package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-dnsf
+package name: jservices-dnsf-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services DNS Filter package (i386) [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-crypto-base
+package name: jservices-crypto-base-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Crypto [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-cpcd
+package name: jservices-cpcd-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Captive Portal and Content Delivery Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-cos
+package name: jservices-cos-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services COS [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-appid
+package name: jservices-appid-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS AppId Services [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-alg
+package name: jservices-alg-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services Application Level Gateways [20230818.132727_builder_junos_212_r3_s6]
+name: jservices-aacl
+package name: jservices-aacl-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Services AACL Container package [20230818.132727_builder_junos_212_r3_s6]
+name: jsdn
+package name: jsdn-x86-32-21.2R3-S6.11
+comment: JUNOS SDN Software Suite [20230818.132727_builder_junos_212_r3_s6]
+name: jsd-jet-1
+package name: jsd-x86-32-21.2R3-S6.11-jet-1
+comment: JUNOS Extension Toolkit [20230818.132727_builder_junos_212_r3_s6]
+name: jphone-home
+package name: jphone-home-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Phone-home [20230818.132727_builder_junos_212_r3_s6]
+name: jpfe-platform
+package name: jpfe-qfx-x86-32-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Packet Forwarding Engine Support (DC-PFE) [20230818.132727_builder_junos_212_r3_s6]
+name: jpfe-common
+package name: jpfe-common-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Packet Forwarding Engine Support (M/T Common) [20230818.132727_builder_junos_212_r3_s6]
+name: jmrt-base
+package name: jmrt-base-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Juniper Malware Removal Tool (JMRT) [1.0.0+20230818.132727_builder_junos_212_r3_s6]
+name: jinsight
+package name: jinsight-x86-32-21.2R3-S6.11
+comment: JUNOS J-Insight [20230818.132727_builder_junos_212_r3_s6]
+name: jfirmware
+package name: jfirmware-x86-32-21.2R3-S6.11
+comment: JUNOS jfirmware [20230818.132727_builder_junos_212_r3_s6]
+name: jdocs
+package name: jdocs-x86-32-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS Online Documentation [20230818.132727_builder_junos_212_r3_s6]
+name: jail-runtime
+package name: jail-runtime-x86-32-20230531.8cb8c20_builder_stable_12_212
+comment: JUNOS jail runtime [20230531.8cb8c20_builder_stable_12_212]
+name: fips-mode
+package name: fips-mode-x86-64-20230818.132727_builder_junos_212_r3_s6
+comment: JUNOS FIPS mode utilities [20230818.132727_builder_junos_212_r3_s6]
+name: Junos host
+comment: Junos host: 21.2R3-S6.11
+name: JUNOS Host kernel-release
+comment: JUNOS Host kernel-release [3.14.52-rt50-WR7.0.0.9_ovp]
+name: JUNOS Host kernel-version
+comment: JUNOS Host kernel-version [#1 SMP Tue Jan 18 00:43:48 PST 2022]
+name: Junos Host Software package[1]
+comment: JUNOS Host ex-4300mp platform package [21.2R3-S6.11]
+name: Junos Host Software package[2]
+comment: JUNOS Host ex-4300mp control-plane package [21.2R3-S6.11]
+name: Junos Host Software package[3]
+comment: JUNOS Host ex-4300mp data-plane package [21.2R3-S6.11]
+name: Junos Host Software package[4]
+comment: JUNOS Host ex-4300mp base package [21.2R3-S6.11]
 
---------------------------------------------------
-Command: show version
-fpc0:
---------------------------------------------------------------------------
-Hostname: vqfx-release
-Model: vqfx-10000
-Junos: 18.1R1.9 limited
-JUNOS Base OS boot [18.1R1.9]
-JUNOS Base OS Software Suite [18.1R1.9]
-JUNOS Crypto Software Suite [18.1R1.9]
-JUNOS Online Documentation [18.1R1.9]
-JUNOS Kernel Software Suite [18.1R1.9]
-JUNOS Packet Forwarding Engine Support (qfx-10-f) [18.1R1.9]
-JUNOS Routing Software Suite [18.1R1.9]
-JUNOS jsd [i386-18.1R1.9-jet-1]
-JUNOS SDN Software Suite [18.1R1.9]
-JUNOS Enterprise Software Suite [18.1R1.9]
-JUNOS Web Management [18.1R1.9]
-JUNOS py-base-i386 [18.1R1.9]
-JUNOS py-extensions-i386 [18.1R1.9]
+===== Show interfaces terse  =====
+name: vcp-255/1/0
+admin status: up
+oper status: up
+name: vcp-255/1/0.32768
+admin status: up
+oper status: up
+name: vcp-255/1/1
+admin status: up
+oper status: up
+name: vcp-255/1/1.32768
+admin status: up
+oper status: up
+name: ge-0/0/0
+admin status: up
+oper status: down
+name: ge-0/0/0.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: gr-0/0/0
+admin status: up
+oper status: up
+name: pfe-0/0/0
+admin status: up
+oper status: up
+name: pfe-0/0/0.16383
+admin status: up
+oper status: up
+address family name: inet
+address family name: inet6
+name: pfh-0/0/0
+admin status: up
+oper status: up
+name: pfh-0/0/0.16383
+admin status: up
+oper status: up
+address family name: inet
+name: pfh-0/0/0.16384
+admin status: up
+oper status: up
+address family name: inet
+name: ge-0/0/1
+admin status: down
+oper status: down
+name: ge-0/0/1.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/2
+admin status: down
+oper status: down
+name: ge-0/0/2.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/3
+admin status: down
+oper status: down
+name: ge-0/0/3.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/4
+admin status: down
+oper status: down
+name: ge-0/0/4.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/5
+admin status: down
+oper status: down
+name: ge-0/0/5.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/6
+admin status: down
+oper status: down
+name: ge-0/0/6.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/7
+admin status: down
+oper status: down
+name: ge-0/0/7.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/8
+admin status: down
+oper status: down
+name: ge-0/0/8.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/9
+admin status: down
+oper status: down
+name: ge-0/0/9.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/10
+admin status: down
+oper status: down
+name: ge-0/0/10.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/11
+admin status: down
+oper status: down
+name: ge-0/0/11.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/12
+admin status: down
+oper status: down
+name: ge-0/0/12.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/13
+admin status: down
+oper status: down
+name: ge-0/0/13.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/14
+admin status: down
+oper status: down
+name: ge-0/0/14.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/15
+admin status: down
+oper status: down
+name: ge-0/0/15.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/16
+admin status: down
+oper status: down
+name: ge-0/0/16.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/17
+admin status: down
+oper status: down
+name: ge-0/0/17.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/18
+admin status: down
+oper status: down
+name: ge-0/0/18.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/19
+admin status: down
+oper status: down
+name: ge-0/0/19.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/20
+admin status: down
+oper status: down
+name: ge-0/0/20.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/21
+admin status: down
+oper status: down
+name: ge-0/0/21.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/22
+admin status: down
+oper status: down
+name: ge-0/0/22.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: ge-0/0/23
+admin status: down
+oper status: down
+name: ge-0/0/23.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/24
+admin status: down
+oper status: down
+name: mge-0/0/24.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/25
+admin status: down
+oper status: down
+name: mge-0/0/25.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/26
+admin status: down
+oper status: down
+name: mge-0/0/26.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/27
+admin status: down
+oper status: down
+name: mge-0/0/27.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/28
+admin status: down
+oper status: down
+name: mge-0/0/28.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/29
+admin status: down
+oper status: down
+name: mge-0/0/29.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/30
+admin status: down
+oper status: down
+name: mge-0/0/30.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/31
+admin status: down
+oper status: down
+name: mge-0/0/31.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/32
+admin status: down
+oper status: down
+name: mge-0/0/32.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/33
+admin status: down
+oper status: down
+name: mge-0/0/33.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/34
+admin status: down
+oper status: down
+name: mge-0/0/34.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/35
+admin status: down
+oper status: down
+name: mge-0/0/35.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/36
+admin status: down
+oper status: down
+name: mge-0/0/36.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/37
+admin status: down
+oper status: down
+name: mge-0/0/37.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/38
+admin status: down
+oper status: down
+name: mge-0/0/38.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/39
+admin status: down
+oper status: down
+name: mge-0/0/39.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/40
+admin status: down
+oper status: down
+name: mge-0/0/40.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/41
+admin status: down
+oper status: down
+name: mge-0/0/41.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/42
+admin status: down
+oper status: down
+name: mge-0/0/42.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/43
+admin status: down
+oper status: down
+name: mge-0/0/43.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/44
+admin status: down
+oper status: down
+name: mge-0/0/44.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/45
+admin status: down
+oper status: down
+name: mge-0/0/45.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/46
+admin status: down
+oper status: down
+name: mge-0/0/46.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: mge-0/0/47
+admin status: down
+oper status: down
+name: mge-0/0/47.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: xe-0/2/0
+admin status: up
+oper status: up
+name: xe-0/2/0.0
+admin status: up
+oper status: up
+address family name: eth-switch
+name: xe-0/2/1
+admin status: up
+oper status: up
+name: xe-0/2/1.0
+admin status: up
+oper status: up
+address family name: eth-switch
+name: ge-1/0/0
+admin status: up
+oper status: down
+name: ge-1/0/0.16386
+admin status: up
+oper status: down
+name: pfe-1/0/0
+admin status: up
+oper status: up
+name: pfe-1/0/0.16383
+admin status: up
+oper status: up
+address family name: inet
+address family name: inet6
+name: pfh-1/0/0
+admin status: up
+oper status: up
+name: pfh-1/0/0.16383
+admin status: up
+oper status: up
+address family name: inet
+name: pfh-1/0/0.16384
+admin status: up
+oper status: up
+address family name: inet
+name: ge-1/0/1
+admin status: up
+oper status: down
+name: ge-1/0/1.16386
+admin status: up
+oper status: down
+name: ge-1/0/2
+admin status: up
+oper status: down
+name: ge-1/0/2.16386
+admin status: up
+oper status: down
+name: ge-1/0/3
+admin status: up
+oper status: down
+name: ge-1/0/3.16386
+admin status: up
+oper status: down
+name: ge-1/0/4
+admin status: up
+oper status: down
+name: ge-1/0/4.16386
+admin status: up
+oper status: down
+name: ge-1/0/5
+admin status: up
+oper status: down
+name: ge-1/0/5.16386
+admin status: up
+oper status: down
+name: ge-1/0/6
+admin status: up
+oper status: down
+name: ge-1/0/6.16386
+admin status: up
+oper status: down
+name: ge-1/0/7
+admin status: up
+oper status: down
+name: ge-1/0/7.16386
+admin status: up
+oper status: down
+name: ge-1/0/8
+admin status: up
+oper status: down
+name: ge-1/0/8.16386
+admin status: up
+oper status: down
+name: ge-1/0/9
+admin status: up
+oper status: down
+name: ge-1/0/9.16386
+admin status: up
+oper status: down
+name: ge-1/0/10
+admin status: up
+oper status: down
+name: ge-1/0/10.16386
+admin status: up
+oper status: down
+name: ge-1/0/11
+admin status: up
+oper status: down
+name: ge-1/0/11.16386
+admin status: up
+oper status: down
+name: ge-1/0/12
+admin status: up
+oper status: down
+name: ge-1/0/12.16386
+admin status: up
+oper status: down
+name: ge-1/0/13
+admin status: up
+oper status: down
+name: ge-1/0/13.16386
+admin status: up
+oper status: down
+name: ge-1/0/14
+admin status: up
+oper status: down
+name: ge-1/0/14.16386
+admin status: up
+oper status: down
+name: ge-1/0/15
+admin status: up
+oper status: down
+name: ge-1/0/15.16386
+admin status: up
+oper status: down
+name: ge-1/0/16
+admin status: up
+oper status: down
+name: ge-1/0/16.16386
+admin status: up
+oper status: down
+name: ge-1/0/17
+admin status: up
+oper status: down
+name: ge-1/0/17.16386
+admin status: up
+oper status: down
+name: ge-1/0/18
+admin status: up
+oper status: down
+name: ge-1/0/18.16386
+admin status: up
+oper status: down
+name: ge-1/0/19
+admin status: up
+oper status: down
+name: ge-1/0/19.16386
+admin status: up
+oper status: down
+name: ge-1/0/20
+admin status: up
+oper status: down
+name: ge-1/0/20.16386
+admin status: up
+oper status: down
+name: ge-1/0/21
+admin status: up
+oper status: down
+name: ge-1/0/21.16386
+admin status: up
+oper status: down
+name: ge-1/0/22
+admin status: up
+oper status: down
+name: ge-1/0/22.16386
+admin status: up
+oper status: down
+name: ge-1/0/23
+admin status: up
+oper status: down
+name: ge-1/0/23.16386
+admin status: up
+oper status: down
+name: mge-1/0/24
+admin status: up
+oper status: down
+name: mge-1/0/25
+admin status: up
+oper status: down
+name: mge-1/0/26
+admin status: up
+oper status: down
+name: mge-1/0/27
+admin status: up
+oper status: down
+name: mge-1/0/28
+admin status: up
+oper status: down
+name: mge-1/0/29
+admin status: up
+oper status: down
+name: mge-1/0/30
+admin status: up
+oper status: down
+name: mge-1/0/31
+admin status: up
+oper status: down
+name: mge-1/0/32
+admin status: up
+oper status: down
+name: mge-1/0/33
+admin status: up
+oper status: down
+name: mge-1/0/34
+admin status: up
+oper status: down
+name: mge-1/0/35
+admin status: up
+oper status: down
+name: mge-1/0/36
+admin status: up
+oper status: down
+name: mge-1/0/37
+admin status: up
+oper status: down
+name: mge-1/0/38
+admin status: up
+oper status: down
+name: mge-1/0/39
+admin status: up
+oper status: down
+name: mge-1/0/40
+admin status: up
+oper status: down
+name: mge-1/0/41
+admin status: up
+oper status: down
+name: mge-1/0/42
+admin status: up
+oper status: down
+name: mge-1/0/43
+admin status: up
+oper status: down
+name: mge-1/0/44
+admin status: up
+oper status: down
+name: mge-1/0/45
+admin status: up
+oper status: down
+name: mge-1/0/46
+admin status: up
+oper status: down
+name: mge-1/0/47
+admin status: up
+oper status: down
+name: bme0
+admin status: up
+oper status: up
+name: bme0.0
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 128.0.0.1/2
+ifa local: 128.0.0.4/2
+ifa local: 128.0.0.63/2
+name: bme0.32770
+admin status: down
+oper status: up
+address family name: eth-switch
+name: cbp0
+admin status: up
+oper status: up
+name: dsc
+admin status: up
+oper status: up
+name: em0
+admin status: up
+oper status: down
+name: em0.0
+admin status: up
+oper status: down
+address family name: eth-switch
+name: em1
+admin status: up
+oper status: down
+name: em2
+admin status: up
+oper status: up
+name: em2.32768
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 192.168.1.2/24
+name: em3
+admin status: up
+oper status: up
+name: esi
+admin status: up
+oper status: up
+name: fti0
+admin status: up
+oper status: up
+name: gre
+admin status: up
+oper status: up
+name: ipip
+admin status: up
+oper status: up
+name: irb
+admin status: up
+oper status: up
+name: irb.411
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 10.8.1.200/24
+name: jsrv
+admin status: up
+oper status: up
+name: jsrv.1
+admin status: up
+oper status: up
+address family name: inet
+ifa local: 128.0.0.127/2
+name: lo0
+admin status: up
+oper status: up
+name: lo0.16385
+admin status: up
+oper status: up
+address family name: inet
+name: lsi
+admin status: up
+oper status: up
+name: mtun
+admin status: up
+oper status: up
+name: pimd
+admin status: up
+oper status: up
+name: pime
+admin status: up
+oper status: up
+name: pip0
+admin status: up
+oper status: up
+name: tap
+admin status: up
+oper status: up
+name: vme
+admin status: up
+oper status: down
+name: vme.0
+admin status: up
+oper status: down
+name: vtep
+admin status: up
+oper status: up
 
---------------------------------------------------
-Command: show interfaces terse
-Interface               Admin Link Proto    Local                 Remote
-gr-0/0/0                up    up
-bme0                    up    up
-bme0.0                  up    up   inet     128.0.0.1/2     
-                                            128.0.0.4/2     
-                                            128.0.0.16/2    
-                                            128.0.0.63/2    
-cbp0                    up    up
-dsc                     up    up
-em0                     up    up
-em0.0                   up    up   inet     192.168.40.131/24
-em1                     up    up
-em1.0                   up    down inet     169.254.0.2/24  
-em2                     up    down
-em2.32768               up    down inet     192.168.1.2/24  
-em3                     up    down
-em4                     up    down
-em4.32768               up    down inet     192.0.2.2/24    
-em5                     up    down
-em6                     up    down
-em7                     up    up
-em8                     up    down
-em9                     up    down
-em10                    up    down
-em11                    up    down
-esi                     up    up
-gre                     up    up
-ipip                    up    up
-irb                     up    up
-jsrv                    up    up
-jsrv.1                  up    up   inet     128.0.0.127/2   
-lo0                     up    up
-lo0.0                   up    up   inet    
-                                   inet6    fe80::205:860f:fc71:f700
-lo0.16385               up    up   inet    
-lsi                     up    up
-mtun                    up    up
-pimd                    up    up
-pime                    up    up
-pip0                    up    up
-tap                     up    up
-vme                     up    down
-vtep                    up    up
+===== Show LLDP neighbors  =====
+lldp local port id: xe-0/2/0
+lldp local parent interface name: -
+lldp remote chassis id subtype: Mac address
+lldp remote chassis id: 24:fc:4e:f1:35:00
+lldp remote port description: Monitored che-corp-aslab-1:xe-0/2/0
+lldp remote system name: che-corp-cr1.athenahealth.com
+lldp local port id: xe-0/2/1
+lldp local parent interface name: -
+lldp remote chassis id subtype: Mac address
+lldp remote chassis id: 24:fc:4e:f2:52:00
+lldp remote port description: Monitored che-corp-aslab-1:xe-0/2/1
+lldp remote system name: che-corp-cr2
 
---------------------------------------------------
-Command: show interfaces descriptions
-Interface       Admin Link Description
-em0             up    up   Management Interface
-em1             up    down Uplink to Core Switch
-em2             up    down Backup Link
-em3             up    down Customer VLAN
-em4             up    down Server Network
-em5             up    down Unused Interface
-em6             up    down WAN Connection
+===== Show virtual-chassis  =====
+virtual chassis id: 9b37.a200.fc3d
+virtual chassis mode: Enabled
+member status: Prsnt
+member id: 0
+fpc slot: (FPC 0)
+member serial number: XR3621390033
+member model: ex4300-48mp
+member priority: 129
+member mixed mode: N
+member route mode: VC
+member role: Master*
+neighbor id: 1
+neighbor interface: vcp-255/1/0
+neighbor id: 1
+neighbor interface: vcp-255/1/1
+member status: Prsnt
+member id: 1
+fpc slot: (FPC 1)
+member serial number: XR3621510455
+member model: ex4300-48mp
+member priority: 129
+member mixed mode: N
+member route mode: VC
+member role: Backup
+neighbor id: 0
+neighbor interface: vcp-255/1/0
+neighbor id: 0
+neighbor interface: vcp-255/1/1
 
---------------------------------------------------
-Command: show lldp neighbors
+===== Show interfaces description  =====
+name: xe-0/2/0
+admin status: up
+oper status: up
+description: Monitored-che-corp-cr1
+name: xe-0/2/1
+admin status: up
+oper status: up
+description: Monitored-che-corp-cr2
 
---------------------------------------------------
-Command: show virtual-chassis
-
-Virtual Chassis ID: 6c89.751e.e97c
-Virtual Chassis Mode: Enabled
-                                                Mstr           Mixed Route Neighbor List
-Member ID  Status   Serial No    Model          prio  Role      Mode  Mode ID  Interface
-0 (FPC 0)  Prsnt    817789208176 vqfx-10000     128   Master*      N  VC
-
-Member ID for next new member: 1 (FPC 1)
-
---------------------------------------------------
+===== Show Ethernet Switching Table  =====
+mac count global: 17
+learnt mac count: 17
+l2ng l2 mac routing instance: default-switch
+l2ng l2 vlan id: 411
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 00:00:5e:00:01:01
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 00:13:c6:01:a1:a9
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 00:13:c6:02:7f:f7
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 00:13:c6:06:0b:1f
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 18:2a:d3:46:62:80
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 18:2a:d3:48:06:80
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 18:2a:d3:48:38:80
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 18:2a:d3:48:51:80
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:8c:65:fb
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:8e:8b:fb
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:90:8e:fb
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:94:77:1a
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:f1:35:00
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 24:fc:4e:f2:52:00
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: 3c:8c:93:ad:a2:7e
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: e0:f6:2d:06:f4:b6
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0
+l2ng l2 mac vlan name: netmgmt
+l2ng l2 mac address: e8:eb:34:9d:89:fd
+l2ng l2 mac flags: D
+l2ng l2 mac age: -
+l2ng l2 mac logical interface: xe-0/2/0.0
+l2ng l2 mac fwd next hop: 0
+l2ng l2 mac rtr id: 0

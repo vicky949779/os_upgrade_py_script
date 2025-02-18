@@ -145,9 +145,9 @@ def os_upgrade():
     Connects to a Junos device via SSH, runs pre-check commands, 
     performs the upgrade (placeholder), and then runs post-check commands.
     """
-    host = input("🔹 Enter device IP/Hostname: ")
-    username = input("🔹 Enter username: ")
-    password = getpass.getpass("🔹 Enter password: ")  # Secure password input
+    host = input("🔹 Enter device IP/Hostname: ") or "sbx-nxos-mgmt.cisco.com"
+    username = input("🔹 Enter username: ") or "admin"
+    password = getpass.getpass("🔹 Enter password: ")  or "Admin_1234!" # Secure password input
 
 
     try:
@@ -158,8 +158,8 @@ def os_upgrade():
             # Run Comparision 
             cwd = get_current_directory()
             # Define file paths
-            precheck_file = os.path.join(cwd, "ppp.txt")
-            postcheck_file = os.path.join(cwd, "precheck_outputs.txt")
+            precheck_file = os.path.join(cwd, "precheck_outputs.txt")
+            postcheck_file = os.path.join(cwd, "postcheck_outputs.txt")
             # Read file contents
             precheck_data = read_file(precheck_file)
             postcheck_data = read_file(postcheck_file)

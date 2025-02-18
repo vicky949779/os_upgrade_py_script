@@ -1,11 +1,11 @@
 import getpass
 import re
 import time
-from jnpr.junos import Device
-from jnpr.junos.utils.scp import SCP
-from jnpr.junos.utils.fs import FS
-from jnpr.junos.utils.sw import SW
-from jnpr.junos.exception import ConnectError
+from jnpr.junos import Device # type: ignore
+from jnpr.junos.utils.scp import SCP # type: ignore
+from jnpr.junos.utils.fs import FS # type: ignore
+from jnpr.junos.utils.sw import SW # type: ignore
+from jnpr.junos.exception import ConnectError # type: ignore
 
 def establish_ssh_connection(hostname, username, password):
     """Establish a connection to the Juniper device using PyEZ."""

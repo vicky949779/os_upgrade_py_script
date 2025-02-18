@@ -1,15 +1,156 @@
 +---------------------------------------------------------------------------------------------------------+
 | Pre-Check                                          | Post-Check                                         |
 +---------------------------------------------------------------------------------------------------------+
-| Hostname: vqfx-release                             | Hostname: vqfx-re                                  |
-| Junos: 18.1R1.9 limited                            | Junos: 18.1R1.91 limited                           |
-| JUNOS py-extensions-i386 [18.1R1.9]                | JUNOS py-extensions-i386 [18.11R1.9]               |
-| gr-0/0/0                up    up                   | gr-0/0/0                down    up                 |
-| em0.0                   up    up   inet            | em0.0                   up    up   inet            |
-| 192.168.40.131/24                                  | 191.168.40.131/24                                  |
-| em1                     up    up                   | em1                     up    down                 |
-| em7                     up    up                   | em7                     up    down                 |
-| em1             up    down Uplink to Core Switch   | em1             down    down Uplink to Core Switch |
-| em2             up    down Backup Link             | em2             down    down Backup Link           |
-| Virtual Chassis Mode: Enabled                      | Virtual Chassis Mode: Disables                     |
+|                                                    | name: xe-0/2/1                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | name: xe-0/2/1.0                                   |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | address family name: eth-switch                    |
+|                                                    | name: ge-1/0/0                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/0.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: pfe-1/0/0                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | name: pfe-1/0/0.16383                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | address family name: inet                          |
+|                                                    | address family name: inet6                         |
+|                                                    | name: pfh-1/0/0                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | name: pfh-1/0/0.16383                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | address family name: inet                          |
+|                                                    | name: pfh-1/0/0.16384                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: up                                    |
+|                                                    | address family name: inet                          |
+|                                                    | name: ge-1/0/1                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/1.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/2                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/2.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/3                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/3.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/4                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/4.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/5                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/5.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/6                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/6.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/7                                     |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/7.16386                               |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/11                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/11.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/12                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/12.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/13                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/13.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/14                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/14.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/15                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/15.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/16                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/16.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/17                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/17.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/18                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/18.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/19                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/19.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/20                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/20.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/21                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/21.16386                              |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/22                                    |
+|                                                    | admin status: up                                   |
+|                                                    | oper status: down                                  |
+|                                                    | name: ge-1/0/22.16386                              |
+|                                                    | lldp remote chassis id: 24:fc:4e:f1:35:00          |
+| lldp remote chassis id:                            |                                                    |
+|                                                    | lldp remote chassis id: 24:fc:4e:f2:52:00          |
+| lldp remote chassis id:                            |                                                    |
+|                                                    | virtual chassis mode: Enabled                      |
+| virtual chassis mode: Disable                      |                                                    |
+|                                                    | admin status: up                                   |
+| admin status: down                                 |                                                    |
 +---------------------------------------------------------------------------------------------------------+
